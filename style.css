@@ -6,15 +6,34 @@
     height: 600px;
     width: 600px;
     border: black solid 1px;
-}
-.yeet{
-    background-color: blue;
+    background-color: white;
+   
 }
 #head{
     align-content: center;
     margin: 30px;
+    width: 100%;
 }
 .default{
     background: white;
     border: solid black 1px;
+}
+body{
+    background: linear-gradient(45deg, pink, yellow) ;
+    text-align: center;
+}
+.btn{
+    font-family: italic small-caps bold 16px/2 crusive;
+    font-size: 15px;
+    padding: 15px;
+
+}
+#change{
+    background-color: chartreuse;
+}
+#reset{
+    background-color: cyan;
+}
+#randomColor{
+    background-color: firebrick;
 }
