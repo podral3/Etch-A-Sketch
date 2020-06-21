@@ -30,29 +30,33 @@ const square = document.querySelectorAll('.small')
     }
     paintGrid(color);
 
- //random color
-
-const randomButton = document.getElementById('randomColor');
-
-    function randColor(){
-        let letters = "0123456789ABCDEF";
-        let color = '#';
-            for(let i=0; i<6; i++){
-                color += letters[Math.floor(Math.random() * 16 )];
-            }
-        return color;
-    }
-
-    randomButton.addEventListener('click',() =>{
-        paintGrid(randColor());
-    })
+ 
    
  // color changing button
 
 const changeButton = document.getElementById('change')
 
-    changeButton.addEventListener('click', ()=>{
+    changeButton.addEventListener('click', ()=>{       
         color = prompt('Type color in Hex');
+        paintGrid(color);
+        console.log(color)
+    })
+
+//random color
+
+const randomButton = document.getElementById('randomColor');
+
+ function randColor(){
+        let letters = "0123456789ABCDEF";
+        let kolor = '#';
+            for(let i=0; i<6; i++){
+                kolor += letters[Math.floor(Math.random() * 16 )];
+            }
+        return kolor;
+    }
+
+    randomButton.addEventListener('click',() =>{
+        paintGrid(randColor());
     })
 
 //resizes container
@@ -81,7 +85,7 @@ const resetButton = document.getElementById('reset')
        resetButton.addEventListener('click', () =>{
         removeGrid();
         resizeGrid();
-        paintGrid();
+        paintGrid(color);
        })
 
 
